@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
+  --color-paper: #f3eee6;
+  --color-ink: #1c1712;
+  --color-muted: #746b60;
+  --color-line: #e0d5c6;
+  --color-accent: #c4491d;
+  --color-accent-ink: #fff7f2;
+  --radius-pill: 999px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-ink);
+  }
+}
